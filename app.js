@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-const db = { AAPL: { live_price: 270.23, close_price: 150.00 } };
+const db = { AAPL: { live_price: 175.00, close_price: 150.00 } };
 
 // 1. The Frontend UI
 app.get('/', (req, res) => {
