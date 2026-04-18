@@ -39,8 +39,8 @@ app.get('/api/stock/:ticker', (req, res) => {
     const data = db[req.params.ticker.toUpperCase()];
     if (!data) return res.status(404).send("Ticker not found");
 
-    // THE BUG: Developer used close_price instead of live_price
-    const displayPrice = data.close_price; 
+    // FIXED: Changed from close_price to live_price
+    const displayPrice = data.live_price; 
     
     res.json({ ticker: req.params.ticker, price: displayPrice });
 });
